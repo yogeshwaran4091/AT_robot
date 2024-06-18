@@ -11,7 +11,7 @@ System should allow user to enter their details
     Input Text    ${Input_text}    ${text} 
     Input Text    ${Input_email}    ${email}
 system should allow user to select their gender
-    Select Radio Button    ${group_name}    ${value}   
+    Select Radio Button    ${group_name}    ${value} 
 System should allow user to select check box
     Mouse Down    ${mouse_scroll}
     FOR    ${id}    IN    @{checkbox_ids}
