@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-18T12:44:14.385511" rpa="false" schemaversion="5">
+<suite id="s1" name="Pandas" source="c:\Users\YogeshwaranAnnadurai\Documents\ETL\pandas.robot">
+<test id="s1-t1" name="pandas" line="23">
+<kw name="Dowload _CSV_File">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-18T12:44:15.775340" level="INFO">Opening browser 'gc' to base url 'https://sample-videos.com/download-sample-csv.php'.</msg>
+<arg>https://sample-videos.com/download-sample-csv.php</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-18T12:44:15.775340" elapsed="6.173200"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-18T12:44:21.949553" elapsed="0.048565"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//td[text()="5,000"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-06-18T12:44:21.998118" elapsed="0.325158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-18T12:44:22.323276" level="INFO">Clicking element '//a[@href="csv/Sample-Spreadsheet-100-rows.csv"]'.</msg>
+<arg>//a[@href="csv/Sample-Spreadsheet-100-rows.csv"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-18T12:44:22.323276" elapsed="0.104310"/>
+</kw>
+<status status="PASS" start="2024-06-18T12:44:15.775340" elapsed="6.652246"/>
+</kw>
+<status status="PASS" start="2024-06-18T12:44:15.775340" elapsed="6.653758"/>
+</test>
+<status status="PASS" start="2024-06-18T12:44:14.396548" elapsed="8.040692"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Pandas">Pandas</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
