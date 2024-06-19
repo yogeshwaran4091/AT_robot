@@ -1,35 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-18T12:44:14.385511" rpa="false" schemaversion="5">
-<suite id="s1" name="Pandas" source="c:\Users\YogeshwaranAnnadurai\Documents\ETL\pandas.robot">
-<test id="s1-t1" name="pandas" line="23">
-<kw name="Dowload _CSV_File">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-19T17:18:10.153518" rpa="false" schemaversion="5">
+<suite id="s1" name="13 6" source="c:\Users\YogeshwaranAnnadurai\Documents\ETL\13_6.robot">
+<test id="s1-t1" name="TC" line="4">
+<kw name="Opening TestAutomation demo application" owner="AT">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-18T12:44:15.775340" level="INFO">Opening browser 'gc' to base url 'https://sample-videos.com/download-sample-csv.php'.</msg>
-<arg>https://sample-videos.com/download-sample-csv.php</arg>
-<arg>gc</arg>
+<msg time="2024-06-19T17:18:10.473687" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>${url_1}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-18T12:44:15.775340" elapsed="6.173200"/>
+<status status="PASS" start="2024-06-19T17:18:10.458041" elapsed="7.880853"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-18T12:44:21.949553" elapsed="0.048565"/>
+<status status="PASS" start="2024-06-19T17:18:18.338894" elapsed="0.064892"/>
 </kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>//td[text()="5,000"]</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-06-18T12:44:21.998118" elapsed="0.325158"/>
+<status status="PASS" start="2024-06-19T17:18:10.458041" elapsed="7.946619"/>
 </kw>
+<kw name="System should allow user to enter their details" owner="AT">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:18.408162" level="INFO">Typing text 'yogesh' into text field '//input[@id="name"]'.</msg>
+<arg>${Input_text}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-19T17:18:18.408162" elapsed="0.307399"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:18.715561" level="INFO">Typing text 'yog@321gamil.com' into text field '//input[@id="email"]'.</msg>
+<arg>${Input_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-19T17:18:18.715561" elapsed="0.315074"/>
+</kw>
+<status status="PASS" start="2024-06-19T17:18:18.404660" elapsed="0.625975"/>
+</kw>
+<kw name="system should allow user to select their gender" owner="AT">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:19.035011" level="INFO">Selecting 'male' from radio button 'gender'.</msg>
+<arg>${group_name}</arg>
+<arg>${value}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-06-19T17:18:19.035011" elapsed="0.134278"/>
+</kw>
+<status status="PASS" start="2024-06-19T17:18:19.032721" elapsed="0.136568"/>
+</kw>
+<kw name="System should allow user to select check box" owner="AT">
+<kw name="Mouse Down" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:19.178811" level="INFO">Simulating Mouse Down on element '//label[text()="Country:"]'.</msg>
+<arg>${mouse_scroll}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2024-06-19T17:18:19.169289" elapsed="0.321101"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:19.490390" level="INFO">Selecting checkbox '//input[@id="sunday"]'.</msg>
+<arg>${id}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-19T17:18:19.490390" elapsed="0.223115"/>
+</kw>
+<var name="${id}">//input[@id="sunday"]</var>
+<status status="PASS" start="2024-06-19T17:18:19.490390" elapsed="0.223115"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:19.713505" level="INFO">Selecting checkbox '//input[@id="monday"]'.</msg>
+<arg>${id}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-19T17:18:19.713505" elapsed="0.204273"/>
+</kw>
+<var name="${id}">//input[@id="monday"]</var>
+<status status="PASS" start="2024-06-19T17:18:19.713505" elapsed="0.204273"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:19.917778" level="INFO">Selecting checkbox '//input[@id="tuesday"]'.</msg>
+<arg>${id}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-19T17:18:19.917778" elapsed="0.217813"/>
+</kw>
+<var name="${id}">//input[@id="tuesday"]</var>
+<status status="PASS" start="2024-06-19T17:18:19.917778" elapsed="0.217813"/>
+</iter>
+<iter>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:20.135591" level="INFO">Selecting checkbox '//input[@id="wednesday"]'.</msg>
+<arg>${id}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-19T17:18:20.135591" elapsed="0.202580"/>
+</kw>
+<var name="${id}">//input[@id="wednesday"]</var>
+<status status="PASS" start="2024-06-19T17:18:20.135591" elapsed="0.202580"/>
+</iter>
+<var>${id}</var>
+<value>@{checkbox_ids}</value>
+<status status="PASS" start="2024-06-19T17:18:19.490390" elapsed="0.847781"/>
+</for>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:20.338171" level="INFO">Verifying checkbox '//input[@id="wednesday"]' is selected.</msg>
+<msg time="2024-06-19T17:18:20.425845" level="INFO">${CSBS} = None</msg>
+<var>${CSBS}</var>
+<arg>${check_box_4}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-06-19T17:18:20.338171" elapsed="0.087674"/>
+</kw>
+<status status="PASS" start="2024-06-19T17:18:19.169289" elapsed="1.256556"/>
+</kw>
+<kw name="System should allow users to select from drop down (index)" owner="AT">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-06-19T17:18:20.430951" level="INFO">Selecting options from selection list '//select[@id="country"]' by index 9.</msg>
+<arg>${index}</arg>
+<arg>9</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-06-19T17:18:20.430951" elapsed="0.444608"/>
+</kw>
+<status status="PASS" start="2024-06-19T17:18:20.430951" elapsed="0.446665"/>
+</kw>
+<kw name="System should allow users to select from drop down (value)" owner="AT">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-18T12:44:22.323276" level="INFO">Clicking element '//a[@href="csv/Sample-Spreadsheet-100-rows.csv"]'.</msg>
-<arg>//a[@href="csv/Sample-Spreadsheet-100-rows.csv"]</arg>
+<msg time="2024-06-19T17:18:20.884319" level="INFO">Clicking element '//option[@value="blue"]'.</msg>
+<arg>${value_DD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-18T12:44:22.323276" elapsed="0.104310"/>
+<status status="PASS" start="2024-06-19T17:18:20.884319" elapsed="0.094733"/>
 </kw>
-<status status="PASS" start="2024-06-18T12:44:15.775340" elapsed="6.652246"/>
+<status status="PASS" start="2024-06-19T17:18:20.881833" elapsed="0.112881"/>
 </kw>
-<status status="PASS" start="2024-06-18T12:44:15.775340" elapsed="6.653758"/>
+<status status="PASS" start="2024-06-19T17:18:10.458041" elapsed="10.536673"/>
 </test>
-<status status="PASS" start="2024-06-18T12:44:14.396548" elapsed="8.040692"/>
+<status status="PASS" start="2024-06-19T17:18:10.165038" elapsed="10.829676"/>
 </suite>
 <statistics>
 <total>
@@ -38,7 +135,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Pandas">Pandas</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="13 6">13 6</stat>
 </suite>
 </statistics>
 <errors>
