@@ -27,11 +27,6 @@ select date
     Wait Until Element Contains    ${date_wait}    ${date_text}
     Click Element    ${date_click}
 
-if_else
-    Run Keyword If    ${value} == 'male'
-    ...    Log    male
-    ...  ELSE
-    ...    Log    female
 
 
         
