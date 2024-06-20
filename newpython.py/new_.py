@@ -7,8 +7,5 @@ import time
 open_browser = webdriver.Chrome()
 url="https://www.saucedemo.com/"
 open_browser.get(url)
-open_browser.find_element(By.ID,'username').click
-time.sleep(5)
-open_browser.maximize_window()
 
 

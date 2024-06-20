@@ -18,3 +18,4 @@ date ='//input[@id="datepicker"]'
 date_wait='//div[@style="position: absolute; top: 889.813px; left: 327.5px; z-index: 1; display: block;"]'
 date_text="Su"
 date_click='//a[text()="7"]'
+slider='//span[@tabindex="0"]'

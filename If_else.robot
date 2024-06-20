@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary 
 Resource    condition.robot
-# Resource    pandas.robot
+Library    pandas.robot
 Library    pandas
 Library    Collections
 Test Teardown    Close All Browsers 

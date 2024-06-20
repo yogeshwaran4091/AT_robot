@@ -8,5 +8,6 @@ TC
     System should allow user to select check box    
     System should allow users to select from drop down (index)
     System should allow users to select from drop down (value) 
-    # select date
+    select date
+    slider
     # if_else
