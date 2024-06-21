@@ -13,5 +13,9 @@ Conditions_IF_else
     ...    Input Text    //input[@id="email"]  @gamil.com
     ...  ELSE
     ...    Log    nothing
+    ...    
+*** Test Cases ***
+o
+    Conditions_IF_else    
 
 

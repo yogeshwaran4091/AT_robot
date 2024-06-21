@@ -1,179 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-20T17:42:33.984509" rpa="false" schemaversion="5">
-<suite id="s1" name="13 6" source="c:\Users\YogeshwaranAnnadurai\Documents\ETL\13_6.robot">
-<test id="s1-t1" name="TC" line="4">
-<kw name="Opening TestAutomation demo application" owner="AT">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-21T17:02:04.400227" rpa="false" schemaversion="5">
+<suite id="s1" name="Automation" source="c:\Users\YogeshwaranAnnadurai\Documents\ETL\automation.robot">
+<test id="s1-t1" name="sauce demo" line="6">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:34.184531" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>${url_1}</arg>
-<arg>${browser}</arg>
+<msg time="2024-06-21T17:02:04.630188" level="INFO">Opening browser 'gc' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>https://parabank.parasoft.com/parabank/index.htm</arg>
+<arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-20T17:42:34.184531" elapsed="9.939435"/>
+<status status="PASS" start="2024-06-21T17:02:04.630188" elapsed="4.108195"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-20T17:42:44.125057" elapsed="0.051597"/>
+<status status="PASS" start="2024-06-21T17:02:08.744723" elapsed="3.799730"/>
 </kw>
-<status status="PASS" start="2024-06-20T17:42:34.184531" elapsed="9.992123"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T17:02:12.618590" level="INFO">${get} = Username</msg>
+<var>${get}</var>
+<arg>//b[text()='Username']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T17:02:12.544453" elapsed="0.074137"/>
 </kw>
-<kw name="System should allow user to enter their details" owner="AT">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T17:02:12.618590" level="INFO">Username</msg>
+<arg>${get}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T17:02:12.618590" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T17:02:12.661640" level="INFO">${gett} = Password</msg>
+<var>${gett}</var>
+<arg>//b[text()='Password']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T17:02:12.618590" elapsed="0.043050"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T17:02:12.661640" level="INFO">Password</msg>
+<arg>${gett}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T17:02:12.661640" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:44.199750" level="INFO">Typing text 'yogesh' into text field '//input[@id="name"]'.</msg>
-<arg>${Input_text}</arg>
-<arg>${text}</arg>
+<msg time="2024-06-21T17:02:12.668733" level="INFO">Typing text 'yogi' into text field '//input[@name="username"]'.</msg>
+<arg>//input[@name="username"]</arg>
+<arg>yogi</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:44.196093" elapsed="0.296689"/>
+<status status="PASS" start="2024-06-21T17:02:12.661640" elapsed="0.296774"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:44.501274" level="INFO">Typing text 'yog@321gamil.com' into text field '//input[@id="email"]'.</msg>
-<arg>${Input_email}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:44.499709" elapsed="0.255901"/>
+<arg>'${get}' == 'Username'</arg>
+<arg>Input Text</arg>
+<arg>//input[@name="username"]</arg>
+<arg>yogi</arg>
+<arg>ELSE IF</arg>
+<arg>'${gett}' == 'Password'</arg>
+<arg>Input Text</arg>
+<arg>//input[@name="password"]</arg>
+<arg>123456</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>@args</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T17:02:12.661640" elapsed="0.296774"/>
 </kw>
-<status status="PASS" start="2024-06-20T17:42:44.196093" elapsed="0.559517"/>
-</kw>
-<kw name="system should allow user to select their gender" owner="AT">
-<kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:44.755610" level="INFO">Selecting 'male' from radio button 'gender'.</msg>
-<arg>${group_name}</arg>
-<arg>${value}</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2024-06-20T17:42:44.755610" elapsed="0.128177"/>
-</kw>
-<status status="PASS" start="2024-06-20T17:42:44.755610" elapsed="0.129532"/>
-</kw>
-<kw name="System should allow user to select check box" owner="AT">
-<kw name="Mouse Down" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:44.889016" level="INFO">Simulating Mouse Down on element '//label[text()="Country:"]'.</msg>
-<arg>${mouse_scroll}</arg>
-<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:44.889016" elapsed="0.314921"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:45.203937" level="INFO">Selecting checkbox '//input[@id="sunday"]'.</msg>
-<arg>${id}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:45.203937" elapsed="0.105939"/>
-</kw>
-<var name="${id}">//input[@id="sunday"]</var>
-<status status="PASS" start="2024-06-20T17:42:45.203937" elapsed="0.105939"/>
-</iter>
-<iter>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:45.309876" level="INFO">Selecting checkbox '//input[@id="monday"]'.</msg>
-<arg>${id}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:45.309876" elapsed="0.103247"/>
-</kw>
-<var name="${id}">//input[@id="monday"]</var>
-<status status="PASS" start="2024-06-20T17:42:45.309876" elapsed="0.103247"/>
-</iter>
-<iter>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:45.413123" level="INFO">Selecting checkbox '//input[@id="tuesday"]'.</msg>
-<arg>${id}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:45.413123" elapsed="0.158220"/>
-</kw>
-<var name="${id}">//input[@id="tuesday"]</var>
-<status status="PASS" start="2024-06-20T17:42:45.413123" elapsed="0.158220"/>
-</iter>
-<iter>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:45.571343" level="INFO">Selecting checkbox '//input[@id="wednesday"]'.</msg>
-<arg>${id}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:45.571343" elapsed="0.163810"/>
-</kw>
-<var name="${id}">//input[@id="wednesday"]</var>
-<status status="PASS" start="2024-06-20T17:42:45.571343" elapsed="0.163810"/>
-</iter>
-<var>${id}</var>
-<value>@{checkbox_ids}</value>
-<status status="PASS" start="2024-06-20T17:42:45.203937" elapsed="0.533170"/>
-</for>
-<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:45.737107" level="INFO">Verifying checkbox '//input[@id="wednesday"]' is selected.</msg>
-<msg time="2024-06-20T17:42:45.838269" level="INFO">${CSBS} = None</msg>
-<var>${CSBS}</var>
-<arg>${check_box_4}</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<status status="PASS" start="2024-06-20T17:42:45.737107" elapsed="0.101162"/>
-</kw>
-<status status="PASS" start="2024-06-20T17:42:44.885142" elapsed="0.953127"/>
-</kw>
-<kw name="System should allow users to select from drop down (index)" owner="AT">
-<kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:45.838269" level="INFO">Selecting options from selection list '//select[@id="country"]' by index 9.</msg>
-<arg>${index}</arg>
-<arg>9</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2024-06-20T17:42:45.838269" elapsed="0.351647"/>
-</kw>
-<status status="PASS" start="2024-06-20T17:42:45.838269" elapsed="0.351647"/>
-</kw>
-<kw name="System should allow users to select from drop down (value)" owner="AT">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:46.193778" level="INFO">Clicking element '//option[@value="blue"]'.</msg>
-<arg>${value_DD}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:46.193778" elapsed="0.075833"/>
-</kw>
-<status status="PASS" start="2024-06-20T17:42:46.193173" elapsed="0.076438"/>
-</kw>
-<kw name="select date" owner="AT">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:46.269611" level="INFO">Clicking element '//input[@id="datepicker"]'.</msg>
-<arg>${date}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-20T17:42:46.269611" elapsed="0.137398"/>
-</kw>
-<status status="PASS" start="2024-06-20T17:42:46.269611" elapsed="0.137398"/>
-</kw>
-<kw name="slider" owner="AT">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-06-20T17:42:46.411356" level="INFO">@{offsets} = [ 100 | 200 | 300 ]</msg>
-<var>@{offsets}</var>
-<arg>100</arg>
-<arg>200</arg>
-<arg>300</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-06-20T17:42:46.410845" elapsed="0.000511"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
-<msg time="2024-06-20T17:42:46.411356" level="FAIL">Value of variable '@{offset}' is not list or list-like.</msg>
-<arg>${slider }</arg>
-<arg>@{offset}</arg>
-<arg>0</arg>
-<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
-<status status="FAIL" start="2024-06-20T17:42:46.411356" elapsed="0.000000">Value of variable '@{offset}' is not list or list-like.</status>
-</kw>
-<var name="${offset}">100</var>
-<status status="FAIL" start="2024-06-20T17:42:46.411356" elapsed="0.000000">Value of variable '@{offset}' is not list or list-like.</status>
-</iter>
-<var>${offset}</var>
-<value>@{offsets}</value>
-<status status="FAIL" start="2024-06-20T17:42:46.411356" elapsed="0.006021">Value of variable '@{offset}' is not list or list-like.</status>
-</for>
-<status status="FAIL" start="2024-06-20T17:42:46.409018" elapsed="0.008359">Value of variable '@{offset}' is not list or list-like.</status>
-</kw>
-<status status="FAIL" start="2024-06-20T17:42:34.184531" elapsed="12.232846">Value of variable '@{offset}' is not list or list-like.</status>
+<status status="PASS" start="2024-06-21T17:02:04.630188" elapsed="8.328226"/>
 </test>
-<status status="FAIL" start="2024-06-20T17:42:33.997199" elapsed="12.428427"/>
+<status status="PASS" start="2024-06-21T17:02:04.407698" elapsed="8.560535"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="13 6">13 6</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation">Automation</stat>
 </suite>
 </statistics>
 <errors>

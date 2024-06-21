@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary 
 Resource    condition.robot
-Library    pandas.robot
+# Library    pandas.robot
 Library    pandas
 Library    Collections
 Test Teardown    Close All Browsers 
@@ -22,7 +22,7 @@ IF_else_ELSE_IF
     Open Browser    https://www.techlistic.com/p/selenium-practice-form.html    gc
     Maximize Browser Window
     Scroll Element Into View    //input[@id="datepicker"]
-    ${GEC}    Get Element Count    //span[text()="Years of Experience"]
+    ${GEC}    Get Element Count    //span[text()="Years of Experience"]   #1
     Log    ${GEC}
     Run Keyword If    ${GEC} == 2 
     ...    Test Keyword 1  
